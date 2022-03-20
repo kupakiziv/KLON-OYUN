@@ -954,6 +954,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Gameovermenu: {fileID: 1656528469}
   nextlvlmenu: {fileID: 732064709}
+  a: 0
 --- !u!4 &717837699
 Transform:
   m_ObjectHideFlags: 0
@@ -1083,6 +1084,7 @@ MonoBehaviour:
   - {fileID: 799128836}
   shotCount: 0
   nextlvlmenu: {fileID: 732064709}
+  retrymenu: {fileID: 0}
 --- !u!4 &760321401
 Transform:
   m_ObjectHideFlags: 0
@@ -1447,7 +1449,6 @@ GameObject:
   - component: {fileID: 1358592743}
   - component: {fileID: 1358592742}
   - component: {fileID: 1358592740}
-  - component: {fileID: 1358592739}
   - component: {fileID: 1358592741}
   m_Layer: 0
   m_Name: Kutuk
@@ -1456,19 +1457,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1358592739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1358592738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d601600f9d9dbb54c9c2e238f4cd9ae0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obj: {fileID: 1358592740}
 --- !u!54 &1358592740
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1497,10 +1485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c759dda74ad66884d9479a6912cb0b08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level1: {fileID: 0}
-  level2: {fileID: 0}
-  level3: {fileID: 1358592745}
-  level4: {fileID: 0}
+  Retry: {fileID: 717837698}
 --- !u!136 &1358592742
 CapsuleCollider:
   m_ObjectHideFlags: 0

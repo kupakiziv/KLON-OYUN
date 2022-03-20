@@ -954,6 +954,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Gameovermenu: {fileID: 1656528469}
   nextlvlmenu: {fileID: 732064709}
+  a: 0
 --- !u!4 &717837699
 Transform:
   m_ObjectHideFlags: 0
@@ -1498,10 +1499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c759dda74ad66884d9479a6912cb0b08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level1: {fileID: 0}
-  level2: {fileID: 1358592745}
-  level3: {fileID: 0}
-  level4: {fileID: 0}
+  Retry: {fileID: 717837698}
 --- !u!136 &1358592742
 CapsuleCollider:
   m_ObjectHideFlags: 0

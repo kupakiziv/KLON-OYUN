@@ -5,7 +5,7 @@ public class RETRY : MonoBehaviour
 {
     public GameObject Gameovermenu;
     public GameObject nextlvlmenu;
-    public static int a=0;
+    public int a=0;
     public void Start()
     {
         
