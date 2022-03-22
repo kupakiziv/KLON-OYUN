@@ -111,6 +111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menu: {fileID: 6073957570826594091, guid: 40b2164c4140517469143eb3c0fda6f7, type: 3}
   spawnpoint: {fileID: 169919782716471220, guid: 7ba9b9ebbac102b408138d939097e8a3, type: 3}
+  Restartbutton: {fileID: 1020080809147825227, guid: b8db086c727a8b54b8e7374650fb241c, type: 3}
   throwforce: 1
   rb: {fileID: 6403994283720109567}
 --- !u!54 &6403994283720109567

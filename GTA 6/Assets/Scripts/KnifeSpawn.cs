@@ -7,8 +7,9 @@ public class KnifeSpawn : MonoBehaviour
 {
     public GameObject menu;
     public Transform spawnpoint;
-    public  static int remainedshots = 7;
-    public static int shots = 0;
+    public   int remainedshots = 7;
+    //public static int shots = 0;
+    
 
 
     public float throwforce=10f;
@@ -47,7 +48,7 @@ public class KnifeSpawn : MonoBehaviour
         {
             Instantiate(rb, spawnpoint.transform.position, spawnpoint.transform.rotation*Quaternion.Euler(-90f, 0, 0f));
             remainedshots-=1;
-            shots++;
+            //shots++;
         }
     }
     
@@ -56,9 +57,6 @@ public class KnifeSpawn : MonoBehaviour
         
         if (collision.collider.CompareTag("box"))
         {
-
-            menu.SetActive(true);
-            
             Time.timeScale = 0f;
            
 
@@ -76,7 +74,7 @@ public class KnifeSpawn : MonoBehaviour
 
     public void shotrefrsh()
     {
-        remainedshots += shots;
+       // remainedshots += shots;
     }
 
 

@@ -28,7 +28,7 @@ public class RETRY : MonoBehaviour
         Gameovermenu.SetActive(false);
         
     }
-    public void Nextlevel()
+   /* public void Nextlevel()
     {
         a++;
         Debug.Log(a);
@@ -45,5 +45,5 @@ public class RETRY : MonoBehaviour
                 break;
         }
         
-    }
+    }*/
 }
