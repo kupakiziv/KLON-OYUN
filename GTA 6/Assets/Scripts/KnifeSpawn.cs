@@ -5,78 +5,43 @@ using UnityEngine.SceneManagement;
 
 public class KnifeSpawn : MonoBehaviour
 {
-    public GameObject menu;
+    //public GameObject menu;
+    public GameObject Knife;
+    private GameObject spawnedKnife;
     public Transform spawnpoint;
-    public   int remainedshots = 7;
-    //public static int shots = 0;
-    
+    public int remainedshots;
 
+    public float throwforce;
 
-    public float throwforce=10f;
-    
-
-
-
-
-    public Rigidbody rb;
-    //public float throwforce = 90;
+    private Nextlevel nextlevel;
 
     public void Start()
     {
-        
-        rb = GetComponent<Rigidbody>();
-        if (SceneManager.sceneCount == 1)
-        {
-            remainedshots += 7;
-        }
-
+        nextlevel = GameObject.Find("Levels").GetComponent<Nextlevel>();
+        spawnpoint = this.gameObject.transform;
     }
-    
-
 
     void FixedUpdate()
     {
-        
-        rb.AddForce(Vector3.up *throwforce*90);
-       
-}
+        if (Input.GetMouseButtonDown(0) && !nextlevel.isGameFailed)
+        {
+            SpawnKnife();
+        }
+    }
     
 
-    public void Knifespawn()
+    public void SpawnKnife()
     {
         if (remainedshots > 0)
         {
-            Instantiate(rb, spawnpoint.transform.position, spawnpoint.transform.rotation*Quaternion.Euler(-90f, 0, 0f));
-            remainedshots-=1;
+            spawnedKnife = Instantiate(Knife, spawnpoint.transform.position, spawnpoint.transform.rotation * Quaternion.Euler(-90f, 0, 0f));
+
+            spawnedKnife.GetComponent<Rigidbody>().AddForce(throwforce * Vector3.up);
+
+            remainedshots--;
             //shots++;
         }
     }
-    
-    public void OnCollisionEnter(Collision collision)
-    {
-        
-        if (collision.collider.CompareTag("box"))
-        {
-            Time.timeScale = 0f;
-           
-
-            Debug.Log(collision.gameObject.name);
-        }
-        else if ((collision.collider.CompareTag("kutuk"))) { 
-            rb.velocity = Vector3.zero;
-            rb.isKinematic = true;
-            rb.transform.SetParent(collision.transform);
-            //Debug.Log(collision.gameObject.name);
-        }
-        
-
-    }
-
-    public void shotrefrsh()
-    {
-       // remainedshots += shots;
-    }
-
 
 }
    

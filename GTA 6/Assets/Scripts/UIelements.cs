@@ -15,11 +15,8 @@ public class UIelements : MonoBehaviour
     {
         if (shotCount == 7 && retrymenu.activeInHierarchy == false) 
         {
-            {
-                
-                nextlvlmenu.SetActive(true);
-                retrymenu.SetActive(false);
-            }
+            nextlvlmenu.SetActive(true);
+            retrymenu.SetActive(false);
         }
     }
 

@@ -5,68 +5,53 @@ using DG.Tweening;
 
 public class Kutuk : MonoBehaviour
 {
-    public RETRY Retry;
+    //public RETRY Retry;
     //public Transform level2;
     //public Transform level3;
     //public Transform level4;
-    
+
+    public Nextlevel nextlevelScript;
+
     #region Changes
     private Ease ease;
 
     private float speed;
 
-	#endregion
+    #endregion
 
     void Start()
     {
-        SpeedSetup();
-        EaseSetup();
+        nextlevelScript = GameObject.Find("Levels").GetComponent<Nextlevel>();
+        SpeedAndEaseSetup();
+        RotateWoodenLog();
+    }
 
+    private void RotateWoodenLog()
+    {
         transform.DORotate(new Vector3(0, 0, 360), speed * 2f, RotateMode.FastBeyond360).SetLoops(-1, LoopType.Restart).SetEase(ease);
-        //level2.DORotate(new Vector3(0, 0, 360), 1 * 2f, RotateMode.FastBeyond360).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.Linear);
-        //level3.transform.DORotate(new Vector3(0, 0, 360), 1.5f * 2f, RotateMode.FastBeyond360).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutBack);
-        //level4.transform.DORotate(new Vector3(0, 0, 180), 2f * 2f, RotateMode.FastBeyond360).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutBounce);
+
     }
 
-    private void SpeedSetup()
+    private void SpeedAndEaseSetup()
     {
-        switch (Retry.a)
-        {
-            case 0:
-                speed = 1f;
-                break;
-            case 1:
-                speed = 1f;
-                break;
-            case 2:
-                speed = 1.5f;
-                break;
-            case 3:
-                speed = 2f;
-                break;
-        }
-    }
-    private void EaseSetup()
-    {
-        switch (Retry.a)
+        switch (nextlevelScript.currentLevelNumber)
         {
             case 0:
                 ease = Ease.Linear;
+                speed = 1f;
                 break;
             case 1:
                 ease = Ease.Linear;
+                speed = 1f;
                 break;
             case 2:
                 ease = Ease.InOutBack;
+                speed = 1.5f;
                 break;
             case 3:
                 ease = Ease.InOutBounce;
+                speed = 2f;
                 break;
         }
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
