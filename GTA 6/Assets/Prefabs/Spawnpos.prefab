@@ -46,4 +46,4 @@ MonoBehaviour:
   Knife: {fileID: 6388173893557437160, guid: 4837d42a836fc2a42a5f72e968faa276, type: 3}
   spawnpoint: {fileID: 0}
   remainedshots: 7
-  throwforce: 900
+  throwforce: 2000

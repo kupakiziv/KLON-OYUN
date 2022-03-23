@@ -73,7 +73,8 @@ public class Nextlevel : MonoBehaviour
         currentlevel=Instantiate(levels[0]);
         isGameFailed = false;
         RestartButton.SetActive(false);
-        
+        currentLevelNumber = 0;
+
 
     }
 

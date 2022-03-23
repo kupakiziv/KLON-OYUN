@@ -21,7 +21,7 @@ public class KnifeSpawn : MonoBehaviour
         spawnpoint = this.gameObject.transform;
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if (Input.GetMouseButtonDown(0) && !nextlevel.isGameFailed)
         {
