@@ -5,10 +5,7 @@ using DG.Tweening;
 
 public class Kutuk : MonoBehaviour
 {
-    //public RETRY Retry;
-    //public Transform level2;
-    //public Transform level3;
-    //public Transform level4;
+   
 
     public Nextlevel nextlevelScript;
 
@@ -42,14 +39,18 @@ public class Kutuk : MonoBehaviour
                 break;
             case 1:
                 ease = Ease.Linear;
-                speed = 1f;
+                speed = 0.8f;
                 break;
             case 2:
-                ease = Ease.InOutBack;
+                ease = Ease.InBack;
                 speed = 1.5f;
                 break;
             case 3:
-                ease = Ease.InOutBounce;
+                ease = Ease.InOutFlash;
+                speed = 2f;
+                break;
+            case 4:
+                ease = Ease.InOutBack;
                 speed = 2f;
                 break;
         }

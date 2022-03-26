@@ -1,20 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class UIknives : MonoBehaviour
 {
     public GameObject[] knives = new GameObject[7];
     public int counter = 0;
+    public Nextlevel next;
     void Start()
     {
-       
+        next = FindObjectOfType<Nextlevel>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)){
+        if (Input.GetMouseButtonDown(0)&&counter<knives.Length){
             Destroy(knives[counter]);
             counter++;
         }

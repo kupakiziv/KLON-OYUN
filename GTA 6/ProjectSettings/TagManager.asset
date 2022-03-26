@@ -10,6 +10,10 @@ TagManager:
   - kutuk
   - knifecube
   - box
+  - apple
+  - yarimelma
+  - apple2
+  - Nextbutton
   layers:
   - Default
   - TransparentFX

@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class Knife : MonoBehaviour
 {
+    
     private Rigidbody rb;
     private Nextlevel nextlevel;
+    public ParticleSystem kiymik;
+    public GameObject log;
+    public GameObject shreddedlog;
+    
+
 
     private KnifeSpawn knifeSpawn;
     private void Start()
@@ -18,17 +24,24 @@ public class Knife : MonoBehaviour
     {
         if (collision.collider.CompareTag("knife"))
         {
+            
             nextlevel.isGameFailed = true;
+            
             //Debug.Log(collision.gameObject.name);
         }
         else if ((collision.collider.CompareTag("kutuk")))
         {
+            kiymik.Play();
             rb.velocity = Vector3.zero;
             rb.isKinematic = true;
             rb.transform.SetParent(collision.transform);
             if(knifeSpawn.remainedshots == 0)
             {
+
                 nextlevel.isGameCompleted = true;
+                
+              
+
             }
             //Debug.Log(collision.gameObject.name);
         }

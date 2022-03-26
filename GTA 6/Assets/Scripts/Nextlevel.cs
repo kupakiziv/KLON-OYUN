@@ -21,6 +21,7 @@ public class Nextlevel : MonoBehaviour
 
     void Start()
     {
+
         //Spawnbutton.SetActive(true);
         Nextlvlbutton.SetActive(false);
         
@@ -59,8 +60,14 @@ public class Nextlevel : MonoBehaviour
 
         if (isGameCompleted)
         {
-            //Spawnbutton.SetActive(false);
+         
+            
+                
             Nextlvlbutton.SetActive(true);
+                
+            
+          
+            
             isGamePlaying = false;
         }
     }

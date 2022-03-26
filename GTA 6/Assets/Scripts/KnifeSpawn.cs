@@ -34,9 +34,9 @@ public class KnifeSpawn : MonoBehaviour
     {
         if (remainedshots > 0)
         {
-            spawnedKnife = Instantiate(Knife, spawnpoint.transform.position, spawnpoint.transform.rotation * Quaternion.Euler(-90f, 0, 0f));
+            spawnedKnife = Instantiate(Knife, spawnpoint.transform.position, spawnpoint.transform.rotation * Quaternion.Euler(-90, 0, 0f));
 
-            spawnedKnife.GetComponent<Rigidbody>().AddForce(throwforce * Vector3.up);
+            spawnedKnife.GetComponent<Rigidbody>().AddForce(throwforce * Vector3.up*3);
 
             remainedshots--;
             //shots++;
