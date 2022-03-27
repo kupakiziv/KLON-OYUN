@@ -8,14 +8,15 @@ public class Knife : MonoBehaviour
     private Rigidbody rb;
     private Nextlevel nextlevel;
     public ParticleSystem kiymik;
-    public GameObject log;
-    public GameObject shreddedlog;
+    
+    
     
 
 
     private KnifeSpawn knifeSpawn;
     private void Start()
     {
+        
         knifeSpawn = GameObject.Find("Spawnpos").GetComponent<KnifeSpawn>();
         nextlevel = GameObject.Find("Levels").GetComponent<Nextlevel>();
         rb = GetComponent<Rigidbody>();
@@ -27,7 +28,7 @@ public class Knife : MonoBehaviour
             
             nextlevel.isGameFailed = true;
             
-            //Debug.Log(collision.gameObject.name);
+            
         }
         else if ((collision.collider.CompareTag("kutuk")))
         {
@@ -43,7 +44,7 @@ public class Knife : MonoBehaviour
               
 
             }
-            //Debug.Log(collision.gameObject.name);
+            
         }
 
 

@@ -1,11 +1,11 @@
 
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 
 public class KnifeSpawn : MonoBehaviour
 {
-    //public GameObject menu;
+    
     public GameObject Knife;
     private GameObject spawnedKnife;
     public Transform spawnpoint;
@@ -39,7 +39,7 @@ public class KnifeSpawn : MonoBehaviour
             spawnedKnife.GetComponent<Rigidbody>().AddForce(throwforce * Vector3.up*3);
 
             remainedshots--;
-            //shots++;
+           
         }
     }
 

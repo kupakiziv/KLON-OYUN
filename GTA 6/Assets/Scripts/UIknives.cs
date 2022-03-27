@@ -10,7 +10,7 @@ public class UIknives : MonoBehaviour
         next = FindObjectOfType<Nextlevel>();
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
         if (Input.GetMouseButtonDown(0)&&counter<knives.Length){
