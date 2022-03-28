@@ -9,17 +9,20 @@ public class Logswitch : MonoBehaviour
     public GameObject Log;
     public int hitcount;
     public int knives;
+
+    private GameObject nextButton;
     
     void Start()
     {
-        
+        if(nextButton == null)
+        {
+            nextButton = GameObject.Find("Levels").GetComponent<Nextlevel>().Nextlvlbutton;
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-
-        if (hitcount >= knives && GameObject.FindGameObjectWithTag("Nextbutton").activeInHierarchy == true)
+        if (hitcount >= knives && nextButton.activeInHierarchy == true)
         {
             Log.SetActive(false);
             Shreddedlog.SetActive(true);
@@ -30,11 +33,7 @@ public class Logswitch : MonoBehaviour
     {
         if (collision.collider.CompareTag("knife"))
         {
-
-            hitcount += 1;
-
-            
-            Debug.Log("hit");
+            hitcount++;
         }
     }
 }

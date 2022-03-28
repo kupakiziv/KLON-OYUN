@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6391966867444914973}
   - component: {fileID: 6391966867444914969}
   - component: {fileID: 6085975180065190711}
+  - component: {fileID: 8200034881744832680}
   m_Layer: 0
   m_Name: Kutuk
   m_TagString: kutuk
@@ -28,7 +29,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6085975180065190709}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.456953, y: 22.891407, z: -22.572021}
   m_LocalScale: {x: 300, y: 300, z: 50}
   m_Children: []
@@ -62,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ab680c2e918e04d4db4c02f0a04ce06e, type: 2}
+  - {fileID: 2100000, guid: e525c8e8845114f41a1dc2b64cedd9e8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -127,3 +128,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 3
+--- !u!114 &8200034881744832680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6085975180065190709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f134d84b1b4f5a647bb3b5073bd8d199, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Shreddedlog: {fileID: 0}
+  Log: {fileID: 6085975180065190709}
+  hitcount: 0
+  knives: 7

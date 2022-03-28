@@ -18,13 +18,9 @@ public class Nextlevel : MonoBehaviour
 
     void Start()
     {
-
-        
-        Nextlvlbutton.SetActive(false);
-        
         currentlevel = Instantiate(levels[0]);
-        
-    
+        RestartButton.SetActive(false);
+        Nextlvlbutton.SetActive(false);
     }
 
     
@@ -34,50 +30,35 @@ public class Nextlevel : MonoBehaviour
     }
     public void Nextlvl()
     {
-     
         Destroy(currentlevel);
-       
         currentLevelNumber++;
         currentlevel = Instantiate(levels[currentLevelNumber]);
-        
-        
         Shotcount = 0;
-        isGameCompleted = false;
         Nextlvlbutton.SetActive(false);
-       
+        isGameCompleted = false;
+        AudioManager.instance.PlayAudio(AudioManager.AudioCallers.UIPressButton);
     }
     public void Update()
     {
         if (isGameFailed)
         {
             RestartButton.SetActive(true);
-      
             Nextlvlbutton.SetActive(false);
         }
 
         if (isGameCompleted)
         {
-         
-            
-                
             Nextlvlbutton.SetActive(true);
-                
-            
-          
-            
-            
         }
     }
     public void Restart()
     {
-        
         Destroy(currentlevel);
         currentlevel=Instantiate(levels[0]);
         isGameFailed = false;
         RestartButton.SetActive(false);
         currentLevelNumber = 0;
-
-
+        AudioManager.instance.PlayAudio(AudioManager.AudioCallers.UIPressButton);
     }
 
 }

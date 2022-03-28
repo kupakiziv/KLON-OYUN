@@ -3,16 +3,12 @@ using DG.Tweening;
 
 public class Kutuk : MonoBehaviour
 {
-   
 
-    public Nextlevel nextlevelScript;
-
-    #region Changes
     private Ease ease;
 
     private float speed;
 
-    #endregion
+    public Nextlevel nextlevelScript;
 
     void Start()
     {
@@ -24,7 +20,6 @@ public class Kutuk : MonoBehaviour
     private void RotateWoodenLog()
     {
         transform.DORotate(new Vector3(0, 0, 360), speed * 2f, RotateMode.FastBeyond360).SetLoops(-1, LoopType.Restart).SetEase(ease);
-
     }
 
     private void SpeedAndEaseSetup()

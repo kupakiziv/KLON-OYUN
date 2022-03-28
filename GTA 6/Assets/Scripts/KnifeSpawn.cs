@@ -36,10 +36,13 @@ public class KnifeSpawn : MonoBehaviour
         {
             spawnedKnife = Instantiate(Knife, spawnpoint.transform.position, spawnpoint.transform.rotation * Quaternion.Euler(-90, 0, 0f));
 
-            spawnedKnife.GetComponent<Rigidbody>().AddForce(throwforce * Vector3.up*3);
+            spawnedKnife.GetComponent<Rigidbody>().AddForce(throwforce * Vector3.up * 3);
+
+            AudioManager.instance.PlayAudio(AudioManager.AudioCallers.KnifeThrow);
 
             remainedshots--;
-           
+
+
         }
     }
 

@@ -13,7 +13,8 @@ public class UIknives : MonoBehaviour
    
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)&&counter<knives.Length){
+        if (Input.GetMouseButtonDown(0)&&counter<knives.Length)
+        {
             Destroy(knives[counter]);
             counter++;
         }
