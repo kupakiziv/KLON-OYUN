@@ -429,8 +429,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kiymik: {fileID: 202789541930435480}
-  log: {fileID: 6085975180065190709, guid: b08f51c71f2e4604eb5f77312ad77e36, type: 3}
-  shreddedlog: {fileID: 1495954559250623396, guid: 8d91f2f9010049641a8a3acf85f733ba, type: 3}
 --- !u!54 &3766654099594199882
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -445,7 +443,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 114
   m_CollisionDetection: 0
 --- !u!65 &1385077091397982080
 BoxCollider:
@@ -458,7 +456,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0059597413, y: 0.0007618797, z: 0.045867782}
+  m_Size: {x: 0.006, y: 0.0012, z: 0.045867782}
   m_Center: {x: 0.0006343646, y: 8.3388185e-18, z: 0.0003740054}
 --- !u!114 &6481298594965872089
 MonoBehaviour:
@@ -473,8 +471,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yarimelma: {fileID: 7508495023263255702, guid: 7e15ad05fb7a9a3438e9f822bff855c7, type: 3}
-  elma1: {fileID: 5855578229936074235, guid: 2e6a6459c5b2c3540a8e3cb53e499886, type: 3}
-  elma2: {fileID: 1248293111198262943, guid: 7c521bcc3a9df9a4ba0ebf964dadbef6, type: 3}
+  elma1: {fileID: 3896138641361639103, guid: 7c521bcc3a9df9a4ba0ebf964dadbef6, type: 3}
+  elma2: {fileID: 6481347224235312673, guid: 63d5fffb503b82346b310f23818e92f1, type: 3}
+  elma3: {fileID: 4795323425485015566, guid: 5456c17dae498d44aab8e9521e2230eb, type: 3}
 --- !u!198 &202789541930435480
 ParticleSystem:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ public class Kutuk : MonoBehaviour
 
     private float speed;
 
+
     public Nextlevel nextlevelScript;
 
     void Start()
@@ -17,7 +18,7 @@ public class Kutuk : MonoBehaviour
         RotateWoodenLog();
     }
 
-    private void RotateWoodenLog()
+    public void RotateWoodenLog()
     {
         transform.DORotate(new Vector3(0, 0, 360), speed * 2f, RotateMode.FastBeyond360).SetLoops(-1, LoopType.Restart).SetEase(ease);
     }

@@ -15,8 +15,12 @@ public class UIknives : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0)&&counter<knives.Length)
         {
-            Destroy(knives[counter]);
-            counter++;
+            if(next.isGameFailed == false)
+            {
+                Destroy(knives[counter]);
+                counter++;
+            }
+            
         }
     }
     

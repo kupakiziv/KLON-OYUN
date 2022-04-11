@@ -8,6 +8,7 @@ public class Knife : MonoBehaviour
     private Rigidbody rb;
     private Nextlevel nextlevel;
     public ParticleSystem kiymik;
+
     
     private KnifeSpawn knifeSpawn;
     private void Start()
@@ -19,19 +20,28 @@ public class Knife : MonoBehaviour
     }
     public void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.CompareTag("knife"))
+        if (collision.gameObject.tag == "knife" && nextlevel.isGameFailed == false)
         {
+            rb.isKinematic = false; 
+            rb.transform.position = new Vector3(rb.transform.position.x, rb.transform.position.y, rb.transform.position.z - 1);
+            rb.velocity = new Vector3(rb.velocity.x, -10, -10);
+            rb.useGravity = true;
+            Destroy(gameObject, 2f);
+            
+
             nextlevel.isGameFailed = true;
+            nextlevel.isGameCompleted = false;
             AudioManager.instance.PlayAudio(AudioManager.AudioCallers.KnifeHitKnife);
             //AudioManager.instance.PlayAudio(AudioManager.AudioCallers.GameFailed);
         }
-        else if ((collision.collider.CompareTag("kutuk")))
+        else if (collision.gameObject.tag == "kutuk" && nextlevel.isGameFailed == false)
         {
             kiymik.Play();
             rb.velocity = Vector3.zero;
             rb.isKinematic = true;
             rb.transform.SetParent(collision.transform);
             AudioManager.instance.PlayAudio(AudioManager.AudioCallers.KnifeHitWood);
+            Destroy(GetComponent<Knife>(), 0.05f);
 
 
             if (knifeSpawn.remainedshots == 0 && !nextlevel.isGameFailed)
@@ -43,4 +53,5 @@ public class Knife : MonoBehaviour
 
 
     }
+
 }
